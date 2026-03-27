@@ -3,238 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMS Pro | Enterprise Management System</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <title>Welcome | Secure Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --slate: #64748b;
-            --light-bg: #f8fafc;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--primary);
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
-
-        /* Hero Section Split Layout */
-        .hero {
-            display: flex;
-            min-height: 100vh;
-            width: 100%;
-        }
-
-        .hero-left {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 8%;
-            background: #fff;
-        }
-
-        .hero-right {
-            flex: 1.2;
-            background: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            clip-path: polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
-        }
-
-        /* Branding */
-        .navbar-brand-custom {
-            position: absolute;
-            top: 40px;
-            font-weight: 800;
-            font-size: 1.5rem;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* Typography & CTA */
-        .display-title {
-            font-size: clamp(2.5rem, 5vw, 3.8rem);
-            font-weight: 800;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-
-        .display-title span { color: var(--accent); }
-
-        .lead-text {
-            font-size: 1.15rem;
-            color: var(--slate);
-            margin-bottom: 2.5rem;
-            max-width: 500px;
-            line-height: 1.6;
-        }
-
-        .btn-main {
-            background: var(--primary);
-            color: white;
-            padding: 18px 40px;
-            border-radius: 14px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            transition: all 0.3s;
-            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.1);
-        }
-
-        .btn-main:hover {
-            background: var(--accent);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.2);
-        }
-
-        /* Glassmorphism Floating Badge */
-        .glass-badge {
-            position: absolute;
-            bottom: 60px;
-            left: 60px;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            padding: 20px 30px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            animation: float 5s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        /* Feature Section (Visible on Scroll) */
-        .features {
-            padding: 100px 8%;
-            background: var(--light-bg);
-        }
-
-        .feature-card {
-            background: white;
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid #edf2f7;
-            transition: 0.3s;
-            height: 100%;
-        }
-
-        .feature-card:hover {
-            border-color: var(--accent);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-        }
-
-        .feature-icon {
-            font-size: 2rem;
-            color: var(--accent);
-            margin-bottom: 20px;
-        }
-
-        @media (max-width: 992px) {
-            .hero-right { display: none; }
-            .hero-left { text-align: center; padding: 100px 5%; }
-            .navbar-brand-custom { left: 50%; transform: translateX(-50%); }
-            .lead-text { margin: 0 auto 2.5rem; }
-            .btn-main { width: 100%; justify-content: center; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-900">
 
-    <section class="hero">
-        <div class="hero-left">
-            <a href="#" class="navbar-brand-custom">
-                <i class="fas fa-shield-halved text-primary"></i>
-                EMS<span>PRO</span>
-            </a>
-
-            <h1 class="display-title">The workspace <br>your team <span>deserves.</span></h1>
-            <p class="lead-text">
-                Streamline your HR operations with real-time attendance, automated leave workflows, and encrypted cloud security. Built for the modern workforce.
-            </p>
-
-            <div class="d-flex flex-column flex-sm-row gap-3 align-items-center">
-                <a href="login.php" class="btn-main">
-                    Launch Portal <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#features" class="text-decoration-none text-dark fw-bold px-3">
-                    Learn More <i class="fas fa-chevron-down ms-1"></i>
-                </a>
-            </div>
-
-            <div class="mt-5 d-flex gap-4 opacity-50 justify-content-center justify-content-lg-start">
-                <div class="small fw-bold"><i class="fas fa-check-circle text-success me-1"></i> ISO Certified</div>
-                <div class="small fw-bold"><i class="fas fa-check-circle text-success me-1"></i> 99.9% Uptime</div>
-            </div>
+    <div class="relative flex flex-col items-center justify-center min-h-screen overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full -z-10">
+            <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=2000" 
+                 alt="Background" class="object-cover w-full h-full opacity-20">
         </div>
 
-        <div class="hero-right">
-            <div class="glass-badge">
-                <div class="d-flex align-items-center gap-3">
-                    <div class="bg-primary text-white p-3 rounded-circle">
-                        <i class="fas fa-chart-line"></i>
+        <main class="w-full max-w-4xl p-8 mx-auto">
+            <div class="grid items-center gap-12 lg:grid-cols-2">
+                
+                <div class="space-y-8 text-center lg:text-left">
+                    <div class="inline-block px-4 py-1 text-sm font-semibold text-blue-700 bg-blue-100 rounded-full">
+                        System Online
                     </div>
+                    <h1 class="text-5xl font-extrabold tracking-tight text-slate-900 lg:text-6xl">
+                        Welcome to the <span class="text-blue-600">Portal.</span>
+                    </h1>
+                    <p class="text-xl text-slate-600 leading-relaxed">
+                        Access your workspace, manage your projects, and stay organized with our professional management suite.
+                    </p>
+                    
                     <div>
-                        <h6 class="mb-0 fw-bold">Live Performance</h6>
-                        <small class="text-success fw-bold">System Optimized</small>
+                        <a href="logi.php" class="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-white transition-all bg-blue-600 rounded-xl hover:bg-blue-700 hover:scale-105 active:scale-95 shadow-xl shadow-blue-200">
+                            Login to Dashboard
+                            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="features" id="features">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Enterprise Solutions</h2>
-                <p class="text-muted">Powerful tools to keep your business running smoothly.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <i class="fas fa-clock feature-icon"></i>
-                        <h5 class="fw-bold">Smart Attendance</h5>
-                        <p class="text-muted small">One-click clock-in with geo-location and time-stamped security.</p>
+                <div class="hidden lg:block">
+                    <div class="relative group">
+                        <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" 
+                             class="relative rounded-2xl shadow-2xl border border-white/20" 
+                             alt="Professional Interface Preview">
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <i class="fas fa-calendar-alt feature-icon"></i>
-                        <h5 class="fw-bold">Leave Automations</h5>
-                        <p class="text-muted small">Request and approve leaves in seconds with automated notifications.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-card">
-                        <i class="fas fa-user-shield feature-icon"></i>
-                        <h5 class="fw-bold">Role Security</h5>
-                        <p class="text-muted small">Advanced permissions ensure sensitive employee data stays private.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <footer class="py-4 text-center border-top">
-        <p class="text-muted small mb-0">&copy; 2026 EMS Pro Solutions. All Rights Reserved.</p>
-    </footer>
+            </div>
+        </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <footer class="absolute bottom-8 text-sm text-slate-400">
+            &copy; 2026 Management System. All rights reserved.
+        </footer>
+    </div>
+
 </body>
 </html>
